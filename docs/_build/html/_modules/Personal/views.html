@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal.views &mdash; Like a Phoenix 01/07/2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=eb666aff"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Like a Phoenix
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Personal.html">Personal package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Like a Phoenix</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Personal.views</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Personal.views</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">authenticate</span><span class="p">,</span> <span class="n">login</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">reverse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpResponseRedirect</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">messages</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">PhoenixForms</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Puns</span><span class="p">,</span> <span class="n">Thoughts</span><span class="p">,</span> <span class="n">DiaryEntry</span>
+
+<span class="c1"># Create your views here.</span>
+
+<div class="viewcode-block" id="user_login">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.user_login">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">user_login</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Renders the index page upon user login request.</span>
+
+<span class="sd">    This view is typically accessed after a successful login or</span>
+<span class="sd">    directly via URL. It does not process any input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The incoming HTTP request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The rendered &#39;index.html&#39; page.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="authenticate_user">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.authenticate_user">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">authenticate_user</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Authenticates a user using POSTed username and password.</span>
+
+<span class="sd">    If the authentication is successful, the user is logged in and</span>
+<span class="sd">    redirected to the home page. Otherwise, they are redirected back</span>
+<span class="sd">    to the login page.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request containing POST data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: Redirect to &#39;home.html&#39; or back to login page.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;Personal:login&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">login</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;home.html&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="account_creation">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.account_creation">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">account_creation</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles user account creation using the PhoenixForms form.</span>
+
+<span class="sd">    If the request method is POST and the form is valid, a new account</span>
+<span class="sd">    is created and the user is redirected to the home page with a success message.</span>
+<span class="sd">    Otherwise, the registration form is displayed again.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request containing form data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The rendered registration or home page.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">PhoenixForms</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;Account created successfully.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;home.html&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">PhoenixForms</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Register.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="phoenixDiary">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.phoenixDiary">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">phoenixDiary</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Displays the five most recent diary entries.</span>
+
+<span class="sd">    Fetches the latest diary entries (ordered by publication date)</span>
+<span class="sd">    and renders them to the &#39;PhoenixDiary.html&#39; template.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The rendered &#39;PhoenixDiary.html&#39; with diary entries.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Latest_diary</span> <span class="o">=</span> <span class="n">DiaryEntry</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;PhoenixDiary.html&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;Latest_diary&#39;</span><span class="p">:</span> <span class="n">Latest_diary</span><span class="p">,</span>
+    <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="jokes">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.jokes">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">jokes</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Displays all pun entries.</span>
+
+<span class="sd">    Fetches all puns from the database and renders them to the &#39;puns.html&#39; template.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The rendered &#39;puns.html&#39; with pun content.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Latest_pun</span> <span class="o">=</span> <span class="n">Puns</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;puns.html&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;Latest_pun&#39;</span><span class="p">:</span> <span class="n">Latest_pun</span><span class="p">,</span>
+    <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="thoughts">
+<a class="viewcode-back" href="../../Personal.html#Personal.views.thoughts">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">thoughts</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Displays the five most recent thoughts.</span>
+
+<span class="sd">    Fetches the latest thoughts (ordered by publication date)</span>
+<span class="sd">    and renders them to the &#39;thoughts.html&#39; template.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The rendered &#39;thoughts.html&#39; with thought entries.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Latest_thoughts</span> <span class="o">=</span> <span class="n">Thoughts</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;thoughts.html&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;Latest_thoughts&#39;</span><span class="p">:</span> <span class="n">Latest_thoughts</span><span class="p">,</span>
+    <span class="p">})</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Lebogang &#34;Flamming Bird&#34; Mosopa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

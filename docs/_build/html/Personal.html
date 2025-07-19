@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal package &mdash; Like a Phoenix 01/07/2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=eb666aff"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Like A Phoenix documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Like a Phoenix
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Personal package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.admin">Personal.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.apps">Personal.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.apps.PersonalConfig"><code class="docutils literal notranslate"><span class="pre">PersonalConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.apps.PersonalConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PersonalConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.apps.PersonalConfig.name"><code class="docutils literal notranslate"><span class="pre">PersonalConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.forms">Personal.forms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.forms.PhoenixForms"><code class="docutils literal notranslate"><span class="pre">PhoenixForms</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.forms.PhoenixForms.email"><code class="docutils literal notranslate"><span class="pre">PhoenixForms.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.forms.PhoenixForms.Meta"><code class="docutils literal notranslate"><span class="pre">PhoenixForms.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.forms.PhoenixForms.base_fields"><code class="docutils literal notranslate"><span class="pre">PhoenixForms.base_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.forms.PhoenixForms.declared_fields"><code class="docutils literal notranslate"><span class="pre">PhoenixForms.declared_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.forms.PhoenixForms.media"><code class="docutils literal notranslate"><span class="pre">PhoenixForms.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.models">Personal.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.models.DiaryEntry"><code class="docutils literal notranslate"><span class="pre">DiaryEntry</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.diary_entry"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.diary_entry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.pub_date"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.diary_entry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.get_next_by_pub_date"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.get_next_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.get_previous_by_pub_date"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.get_previous_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.id"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.DiaryEntry.objects"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">DiaryEntry.pub_date</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.models.Puns"><code class="docutils literal notranslate"><span class="pre">Puns</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.puns_text"><code class="docutils literal notranslate"><span class="pre">Puns.puns_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.pub_date"><code class="docutils literal notranslate"><span class="pre">Puns.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Puns.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Puns.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.get_next_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Puns.get_next_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.get_previous_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Puns.get_previous_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.id"><code class="docutils literal notranslate"><span class="pre">Puns.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Puns.objects"><code class="docutils literal notranslate"><span class="pre">Puns.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">Puns.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">Puns.puns_text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.models.Thoughts"><code class="docutils literal notranslate"><span class="pre">Thoughts</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.thoughts_text"><code class="docutils literal notranslate"><span class="pre">Thoughts.thoughts_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.pub_date"><code class="docutils literal notranslate"><span class="pre">Thoughts.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Thoughts.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Thoughts.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.get_next_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Thoughts.get_next_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.get_previous_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Thoughts.get_previous_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.id"><code class="docutils literal notranslate"><span class="pre">Thoughts.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personal.models.Thoughts.objects"><code class="docutils literal notranslate"><span class="pre">Thoughts.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">Thoughts.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">Thoughts.thoughts_text</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.tests">Personal.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.urls">Personal.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal.views">Personal.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.account_creation"><code class="docutils literal notranslate"><span class="pre">account_creation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.authenticate_user"><code class="docutils literal notranslate"><span class="pre">authenticate_user()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.jokes"><code class="docutils literal notranslate"><span class="pre">jokes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.phoenixDiary"><code class="docutils literal notranslate"><span class="pre">phoenixDiary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.thoughts"><code class="docutils literal notranslate"><span class="pre">thoughts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Personal.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Personal">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Like a Phoenix</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Personal package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Personal.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="personal-package">
+<h1>Personal package<a class="headerlink" href="#personal-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Personal.admin">
+<span id="personal-admin-module"></span><h2>Personal.admin module<a class="headerlink" href="#module-Personal.admin" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Personal.apps">
+<span id="personal-apps-module"></span><h2>Personal.apps module<a class="headerlink" href="#module-Personal.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.apps.PersonalConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Personal.apps.</span></span><span class="sig-name descname"><span class="pre">PersonalConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/apps.html#PersonalConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.apps.PersonalConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.apps.PersonalConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#Personal.apps.PersonalConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.apps.PersonalConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Personal'</span></em><a class="headerlink" href="#Personal.apps.PersonalConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Personal.forms">
+<span id="personal-forms-module"></span><h2>Personal.forms module<a class="headerlink" href="#module-Personal.forms" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Personal.forms.</span></span><span class="sig-name descname"><span class="pre">PhoenixForms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/forms.html#PhoenixForms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.forms.PhoenixForms" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+<p>Custom user registration form extending Django’s built-in UserCreationForm.</p>
+<p>Adds an email field and customizes the fields used during registration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#Personal.forms.PhoenixForms.email" title="Link to this definition"></a></dt>
+<dd><p>The user’s email address. Required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>EmailField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.Meta">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/Personal/forms.html#PhoenixForms.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.forms.PhoenixForms.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Metadata for PhoenixForms.</p>
+<p>Specifies the User model and fields to include in the form.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username',</span> <span class="pre">'email',</span> <span class="pre">'password1',</span> <span class="pre">'password2']</span></em><a class="headerlink" href="#Personal.forms.PhoenixForms.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#Personal.forms.PhoenixForms.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#Personal.forms.PhoenixForms.base_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#Personal.forms.PhoenixForms.declared_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Personal.forms.PhoenixForms.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#Personal.forms.PhoenixForms.media" title="Link to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Personal.models">
+<span id="personal-models-module"></span><h2>Personal.models module<a class="headerlink" href="#module-Personal.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Personal.models.</span></span><span class="sig-name descname"><span class="pre">DiaryEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/models.html#DiaryEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.models.DiaryEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Model representing a diary entry.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.diary_entry">
+<span class="sig-name descname"><span class="pre">diary_entry</span></span><a class="headerlink" href="#Personal.models.DiaryEntry.diary_entry" title="Link to this definition"></a></dt>
+<dd><p>The content of the diary entry (max 500 characters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CharField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.pub_date">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#Personal.models.DiaryEntry.pub_date" title="Link to this definition"></a></dt>
+<dd><p>The date the diary entry was published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DateField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Personal.models.DiaryEntry.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Personal.models.DiaryEntry.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">diary_entry</span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.get_next_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_next_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.DiaryEntry.get_next_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.get_previous_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.DiaryEntry.get_previous_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Personal.models.DiaryEntry.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.DiaryEntry.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Personal.models.DiaryEntry.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.models.Puns">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Personal.models.</span></span><span class="sig-name descname"><span class="pre">Puns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/models.html#Puns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.models.Puns" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Model representing a pun entry.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Puns.puns_text">
+<span class="sig-name descname"><span class="pre">puns_text</span></span><a class="headerlink" href="#Personal.models.Puns.puns_text" title="Link to this definition"></a></dt>
+<dd><p>The text of the pun (max 250 characters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CharField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Puns.pub_date">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#Personal.models.Puns.pub_date" title="Link to this definition"></a></dt>
+<dd><p>The date the pun was published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DateField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.Puns.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Personal.models.Puns.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.Puns.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Personal.models.Puns.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.Puns.get_next_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_next_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.Puns.get_next_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.Puns.get_previous_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.Puns.get_previous_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Puns.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Personal.models.Puns.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Puns.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Personal.models.Puns.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">puns_text</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Personal.models.Thoughts">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Personal.models.</span></span><span class="sig-name descname"><span class="pre">Thoughts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/models.html#Thoughts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.models.Thoughts" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Model representing a thought entry.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.thoughts_text">
+<span class="sig-name descname"><span class="pre">thoughts_text</span></span><a class="headerlink" href="#Personal.models.Thoughts.thoughts_text" title="Link to this definition"></a></dt>
+<dd><p>The content of the thought (max 250 characters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CharField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.pub_date">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#Personal.models.Thoughts.pub_date" title="Link to this definition"></a></dt>
+<dd><p>The date the thought was published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DateField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Personal.models.Thoughts.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Personal.models.Thoughts.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.get_next_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_next_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.Thoughts.get_next_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.get_previous_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Personal.models.Thoughts.get_previous_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Personal.models.Thoughts.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Personal.models.Thoughts.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Personal.models.Thoughts.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">thoughts_text</span></span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Personal.tests">
+<span id="personal-tests-module"></span><h2>Personal.tests module<a class="headerlink" href="#module-Personal.tests" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Personal.urls">
+<span id="personal-urls-module"></span><h2>Personal.urls module<a class="headerlink" href="#module-Personal.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Personal.views">
+<span id="personal-views-module"></span><h2>Personal.views module<a class="headerlink" href="#module-Personal.views" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.account_creation">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">account_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#account_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.account_creation" title="Link to this definition"></a></dt>
+<dd><p>Handles user account creation using the PhoenixForms form.</p>
+<p>If the request method is POST and the form is valid, a new account
+is created and the user is redirected to the home page with a success message.
+Otherwise, the registration form is displayed again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request containing form data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered registration or home page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.authenticate_user">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">authenticate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#authenticate_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.authenticate_user" title="Link to this definition"></a></dt>
+<dd><p>Authenticates a user using POSTed username and password.</p>
+<p>If the authentication is successful, the user is logged in and
+redirected to the home page. Otherwise, they are redirected back
+to the login page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request containing POST data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirect to ‘home.html’ or back to login page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.jokes">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">jokes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#jokes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.jokes" title="Link to this definition"></a></dt>
+<dd><p>Displays all pun entries.</p>
+<p>Fetches all puns from the database and renders them to the ‘puns.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered ‘puns.html’ with pun content.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.phoenixDiary">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">phoenixDiary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#phoenixDiary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.phoenixDiary" title="Link to this definition"></a></dt>
+<dd><p>Displays the five most recent diary entries.</p>
+<p>Fetches the latest diary entries (ordered by publication date)
+and renders them to the ‘PhoenixDiary.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered ‘PhoenixDiary.html’ with diary entries.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.thoughts">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">thoughts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#thoughts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.thoughts" title="Link to this definition"></a></dt>
+<dd><p>Displays the five most recent thoughts.</p>
+<p>Fetches the latest thoughts (ordered by publication date)
+and renders them to the ‘thoughts.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered ‘thoughts.html’ with thought entries.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Personal.views.user_login">
+<span class="sig-prename descclassname"><span class="pre">Personal.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Personal/views.html#user_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Personal.views.user_login" title="Link to this definition"></a></dt>
+<dd><p>Renders the index page upon user login request.</p>
+<p>This view is typically accessed after a successful login or
+directly via URL. It does not process any input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered ‘index.html’ page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Personal">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Personal" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Like A Phoenix documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Lebogang &#34;Flamming Bird&#34; Mosopa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
