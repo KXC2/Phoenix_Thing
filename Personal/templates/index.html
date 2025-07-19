@@ -1,0 +1,12 @@
+<h1> To be able to continue please login </h1>
+<form action="{% url 'Personal:authenticate_user' %}" method="post">
+{% csrf_token %}
+<label>Username</label>
+<input type="text" name="username" placeholder="User" required>
+<br/><br/>
+<label>Password</label>
+<input type="password" name="password" required>
+<br/><br/>
+<input type="submit" value="Login" />
+</form>
+ <a href="{% url 'Personal:account_creation' %}">Click here to create an account</a>   

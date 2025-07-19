@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>It's a Phoenix thing</title>
+        <style>
+            body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:blanchedalmond;
+            color: black;
+            font-size: large;
+            }
+            .header {
+            text-align: center;
+            margin-bottom: 30px;
+            }
+            .about {
+            flex: 2;
+            }
+             .part {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 500px;
+            background-color: black;
+            color: wheat;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+         .Pic{
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            object-fit: fill;
+            
+        }
+        .info{
+            margin: 50px 0;
+            font-size: 1.2em;
+        }
+        </style>
+    </head>
+    <body>
+            <div class="header">
+            <h1 style="color: goldenrod;">It's a Phoenix Thing!</h1>
+             <div class="about">
+                <h2>About me</h2>
+                <p>Its a Phoenix Thing
+            </div>
+        </div>
+
+        </div>
+
+        <div class="part">
+            <div class="box">
+               <img src="{% static 'wp12255191.webp'%}" alt="Profile" class="Pic">
+               <div class="info">
+                <h2>Lebogang Mosopa</h2>
+                <p>lebogang.mosopa@outlook.com</p>
+                <p>Software Engineer
+                <p>Capitec Bank Limited
+               <h2>Read about Phoenix</h2>
+                <ul>
+                    <li>
+                        <a href="{% url 'Personal:phoenixDiary' %}">Diary of the Phoenix</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Personal:jokes' %}">Corny programming jokes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Personal:thoughts' %}">Cornier programming thoughts</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+    </body>
+</html>

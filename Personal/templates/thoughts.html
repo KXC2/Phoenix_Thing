@@ -1,0 +1,22 @@
+<html>
+<body>
+    <h1>Penny for Phoenix' thoughts?!</h1>
+{% if Latest_thoughts %}
+<div class="container mt-4"> 
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"> 
+      <div class="col"> 
+        <ul>
+            {% for thoughts in Latest_thoughts %}
+            <li>
+                    {{ thoughts.thoughts_text }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No thoughts for you.</p>
+        {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html> 
